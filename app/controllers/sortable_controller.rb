@@ -1,4 +1,6 @@
 class SortableController < ApplicationController
+  before_action :authenticate_user!
+
   #
   # post /sortable/reorder, rails_sortable: [{ klass: "Item", id: "3" }, { klass: "Item", id: "2" }, { klass: "Item", id: "1" }]
   #
