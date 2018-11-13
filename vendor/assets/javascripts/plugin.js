@@ -18,6 +18,10 @@
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify(makePostData($(this))),
+      }).done(function() {
+        if ($.fn.sortComplete) {
+          sortComplete(); 
+        }
       });
     }
 
