@@ -7,7 +7,7 @@ class SortableController < ApplicationController
       params['rails_sortable'].each_with_index do |klass_to_id, new_sort|
         model = find_model(klass_to_id)
         current_sort = model.read_attribute(model.class.sort_attribute)
-        model.update_sort!(new_sort) if current_sort != new_sort
+        model.update_sort!(new_sort) if current_sort != new_sort && model.user == current_user
       end
     end
 
