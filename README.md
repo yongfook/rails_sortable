@@ -11,7 +11,7 @@ Add the following to your `Gemfile` then run bundle to install them.
 ```
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'rails_sortable'
+gem 'rails_sortable', :git => "https://github.com/yongfook/rails_sortable.git"
 ```
 
 And then add the following to the asset pipeline in the `application.js`:
